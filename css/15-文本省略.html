@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本省略</title>
+    <style type="text/css">
+      div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      当我们从一个组件的 data 函数中返回一个普通的 JavaScript 对象时，Vue
+      会将该对象包裹在一个带有 get 和 set 处理程序的 Proxy 中。Proxy 是在 ES6
+      中引入的，它使 Vue 3 避免了 Vue 早期版本中存在的一些响应性问题。
+    </div>
+    <p>
+      当我们从一个组件的 data 函数中返回一个普通的 JavaScript 对象时，Vue
+      会将该对象包裹在一个带有 get 和 set 处理程序的 Proxy 中。Proxy 是在 ES6
+      中引入的，它使 Vue 3 避免了 Vue 早期版本中存在的一些响应性问题。
+    </p>
+  </body>
+</html>
