@@ -35,6 +35,10 @@ So,let's begin!(是的，我已经迫不及待的想要发难了 🙄)
 ### CSS
 
 - 谈谈盒模型吧？
+- 垂直水平居中（OS:考察 margin 负值，position（relative&absolute），flex 这么经典的一题你确定不考？）
+- 两栏布局（OS:考察 float，BFC，flex:1，position 哦吼，这下你知道为什么要考它了吧）
+- 画三角形或扇形（OS:如果你知道 border 是由三角形组成的，就不会对这道题考察什么感到困惑）
+- 可视区最大的正方形（OS:考察 padding 百分比）
 
 ### JavaScript
 
