@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事件流</title>
+    <style type="text/css">
+      #a {
+        width: 300px;
+        height: 300px;
+        background: pink;
+      }
+      #b {
+        width: 200px;
+        height: 200px;
+        background: blue;
+      }
+      #c {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="a">
+      <div id="b">
+        <div id="c"></div>
+      </div>
+    </div>
+
+    <script>
+      //   点击c或者b
+      //   点击a
+      //   注释掉 event.stopImmediatePropagation 点击c
+      var a = document.getElementById("a"),
+        b = document.getElementById("b"),
+        c = document.getElementById("c");
+      c.addEventListener(
+        "click",
+        function (event) {
+          console.log("c1");
+        },
+        //默认false 代表冒泡阶段调用，个人认为处于目标阶段也会调用的
+        false
+      );
+      c.addEventListener(
+        "click",
+        function (event) {
+          console.log("c2");
+        },
+        true
+      );
+      b.addEventListener(
+        "click",
+        function (event) {
+          console.log("b");
+        },
+        true
+      );
+      a.addEventListener(
+        "click",
+        function (event) {
+          console.log("a1");
+        },
+        true
+      );
+      a.addEventListener(
+        "click",
+        function (event) {
+          console.log("a2");
+        },
+        false
+      );
+      a.addEventListener(
+        "click",
+        function (event) {
+          console.log("a3");
+          //   event.stopImmediatePropagation();
+        },
+        true
+      );
+      a.addEventListener(
+        "click",
+        function (event) {
+          console.log("a4");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>
