@@ -2,6 +2,7 @@
 function bindEvent(elem, type, fn) {
   elem.addEventListener(type, fn);
 }
+// 通用的事件绑定函数 考虑事件代理
 // function bindEvent(elem, type, selector, fn) {
 //     if (fn == null) {
 //         fn = selector
@@ -29,11 +30,11 @@ bindEvent(btn1, "click", function (event) {
   alert(this.innerHTML);
 });
 
+// 事件代理 只在父元素绑定事件
 const div3 = document.getElementById("div3");
 bindEvent(div3, "click", function (event) {
-  const target = event.target.nodeName;
-  //   event.preventDefault(); // 阻止默认行为
-  if (target === "A") alert(this.innerHTML);
+  const target = event.target;
+  if (target.nodeName === "A") alert(target.innerHTML);
 });
 
 // 代理绑定
