@@ -1,3 +1,6 @@
+/**
+ * mdn
+ */
 const person = {
   isHuman: false,
   printIntroduction: function () {
