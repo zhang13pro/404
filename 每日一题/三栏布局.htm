@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .container {
+        position: relative;
+        height: 100px;
+      }
+
+      .left {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: tomato;
+      }
+
+      .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        background: gold;
+      }
+
+      .center {
+        margin-left: 100px;
+        margin-right: 200px;
+        height: 100px;
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>
