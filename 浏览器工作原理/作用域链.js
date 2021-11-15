@@ -13,3 +13,19 @@ function foo() {
 }
 var myName = " 极客时间 ";
 foo();
+
+function Far() {
+  var feints = 0;
+  this.getFeints = function () {
+    return feints;
+  };
+  this.feint = function () {
+    feints = feints + 1;
+    console.log(feints);
+  };
+}
+var far1 = new Far();
+var far2 = new Far();
+// 作用域查找
+far1.feint();
+console.log(far2.getFeints());

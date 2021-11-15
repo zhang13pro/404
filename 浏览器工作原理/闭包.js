@@ -8,6 +8,7 @@ function foo() {
   const test2 = 2;
   var innerBar = {
     getName: function () {
+      debugger;
       console.log(test1);
       return myName;
     },
