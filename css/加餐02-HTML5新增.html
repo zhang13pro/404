@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <!-- 表单类型 -->
+      <input type="email" placeholder="Email" oninput="change()" />
+      <input class="cat" type="text" placeholder="Clear" oninput="clear1()" />
+
+      <!-- <input type="url" placeholder="URL" /> -->
+      <!-- <input type="number" placeholder="number" /> -->
+      <!-- <input type="search" placeholder="search" /> -->
+      <input type="color" placeholder="color" />
+      <input type="time" placeholder="time" />
+      <input type="month" />
+      <input type="week" />
+      <input type="submit" />
+    </form>
+
+    <progress value="70" max="100"></progress>
+
+    <meter min="0" low="30" high="90" max="100" value="45"></meter>
+
+    <img draggable="true" alt="无图" />
+
+    <script>
+      localStorage.setItem("myCat", "Tom");
+      function change() {
+        let cat = localStorage.getItem("myCat");
+        document.querySelector(".cat").value = cat;
+      }
+
+      function clear1() {
+        localStorage.removeItem("myCat");
+        let address = navigator.geolocation.getCurrentPosition(() => {
+          console.log(navigator.geolocation);
+        });
+        console.log(address, localStorage);
+      }
+    </script>
+  </body>
+</html>
