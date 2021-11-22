@@ -2,7 +2,7 @@ function debounce(fn, delay) {
   let timer = null;
   return function () {
     let context = this,
-      // TODO 不缓存不行吗
+      //TODO 不缓存不行吗
       args = arguments;
 
     if (timer) {
